@@ -17,7 +17,7 @@ risc-processor/
 │   ├── instruction_memory.v
 │   ├── register_file.v
 │   ├── pipeline_registers.v
-│   └── top.v            # Top-level module
+│   └── cpu.v            # Top-level module
 ├── testbench/           # Simulation testbenches
 │   └── cpu_tb.v
 └── README.md
