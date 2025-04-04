@@ -31,7 +31,7 @@ risc-processor/
 - ALU with basic arithmetic and logic ops (ADD, SUB, AND, OR, XOR, etc.)
 - Load/Store instructions
 - Unconditional and conditional branches
-- Single-cycle or multi-cycle implementation (specify which)
+- Single-cycle or Multi-cycle
 - Modular Verilog design for clarity and reuse
 
 ## 🧪 Testing
@@ -40,7 +40,7 @@ Testbenches written in Verilog to verify processor functionality:
 
 ```bash
 # Example: Run simulation with Icarus Verilog
-iverilog -o processor_tb testbench/processor_tb.v src/*.v
+iverilog -o cpu_tb testbench/cpu_tb.v src/*.v
 vvp processor_tb
 ```
 
@@ -60,7 +60,7 @@ Refer to the `docs/` directory for detailed design information.
 - Verilog HDL
 - Icarus Verilog (simulation)
 - GTKWave (waveform viewer)
-- (Optional) ModelSim / Vivado for advanced simulation and synthesis
+- Vivado for advanced simulation and synthesis
 
 ## 📈 Future Work
 
@@ -74,6 +74,3 @@ Refer to the `docs/` directory for detailed design information.
 
 Makari Green
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
