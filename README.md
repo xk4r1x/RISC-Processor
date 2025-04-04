@@ -38,11 +38,7 @@ risc-processor/
 
 Testbenches written in Verilog to verify processor functionality:
 
-```bash
-# Example: Run simulation with Icarus Verilog
-iverilog -o cpu_tb testbench/cpu_tb.v src/*.v
-vvp processor_tb
-```
+Test were done in Vivado
 
 Sample test programs are available in `instruction_memory.v`.
 
@@ -58,8 +54,6 @@ Refer to the `docs/` directory for detailed design information.
 ## 🛠 Tools Used
 
 - Verilog HDL
-- Icarus Verilog (simulation)
-- GTKWave (waveform viewer)
 - Vivado for advanced simulation and synthesis
 
 ## 📈 Future Work
