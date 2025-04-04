@@ -13,9 +13,10 @@ risc-processor/
 ├── src/                 # Verilog source files
 │   ├── alu.v            # Arithmetic Logic Unit
 │   ├── control_unit.v   # Control logic
-│   ├── datapath.v       # Core datapath logic
+│   ├── data_memory.v       # Core datapath logic
 │   ├── instruction_memory.v
 │   ├── register_file.v
+│   ├── hazard_detection.v
 │   ├── pipeline_registers.v
 │   └── cpu.v            # Top-level module
 ├── testbench/           # Simulation testbenches
