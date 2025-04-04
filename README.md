@@ -18,9 +18,7 @@ risc-processor/
 │   ├── register_file.v
 │   └── top.v            # Top-level module
 ├── testbench/           # Simulation testbenches
-│   └── processor_tb.v
-├── docs/                # Documentation (ISA, architecture diagrams)
-├── sim/                 # Simulation outputs
+│   └── cpu_tb.v
 └── README.md
 ```
 
