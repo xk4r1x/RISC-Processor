@@ -16,6 +16,7 @@ risc-processor/
 │   ├── datapath.v       # Core datapath logic
 │   ├── instruction_memory.v
 │   ├── register_file.v
+│   ├── pipeline_registers.v
 │   └── top.v            # Top-level module
 ├── testbench/           # Simulation testbenches
 │   └── cpu_tb.v
