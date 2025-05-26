@@ -1,38 +1,31 @@
 `timescale 1ns / 1ps
 
 module CPU_tb;
-    // Testbench Signals
+
     logic clk;
     logic reset;
+    logic [31:0] current_PC, instruction_out, ALU_result_out;
 
-    // Instantiate the CPU
     CPU uut (
         .clk(clk),
-        .reset(reset)
+        .reset(reset),
+        .current_PC(current_PC),
+        .instruction_out(instruction_out),
+        .ALU_result_out(ALU_result_out)
     );
 
-    // Clock Generation
-    always #5 clk = ~clk;  // Generate a clock with 10 ns period (100 MHz)
+    always #5 clk = ~clk;
 
-    // Test Procedure
     initial begin
-        // Initialize Signals
         clk = 0;
         reset = 1;
-
-        // Hold Reset for a Few Cycles
-        #10;
-        reset = 0;
-        #10;
+        #10 reset = 0;
         
-        // Run for 100 clock cycles
         repeat (100) begin
-            #10;  // Wait for next clock cycle
-            $display("PC: %d | Instruction: %h | ALU Result: %d | MemRead: %b | MemWrite: %b | RegWrite: %b", 
-                     uut.PC, uut.instruction, uut.ALU_result, uut.MemRead, uut.MemWrite, uut.RegWrite);
+            #10;
+            $display("PC: %0d | Instruction: %h | ALU Result: %d", current_PC, instruction_out, ALU_result_out);
         end
 
-        // End simulation
         $finish;
     end
 endmodule
